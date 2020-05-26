@@ -58,7 +58,8 @@ anim <- prob_tibble %>% ggplot() +
   geom_line(aes(x = rolls, y = simulated_wins)) + 
   geom_point(aes(x = rolls, y = simulated_wins)) +
   # geom_line(aes(x = rolls, y = probability_of_win)) + 
-  labs(x = "Rolls per game", y = "Proportion of games won") 
+  labs(x = "Rolls per game", y = "Proportion of games won") + 
+  theme_minimal()
 # set frame rate and review animation 
 animate(anim, fps = 10)
 # Save as gif 
